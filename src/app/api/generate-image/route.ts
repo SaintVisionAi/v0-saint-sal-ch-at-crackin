@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
         quality: quality as 'standard' | 'hd',
       })
 
-      const imageUrl = response.data[0]?.url
+      const imageUrl = response.data?.[0]?.url
 
       if (!imageUrl) {
         return NextResponse.json(
@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
         quality: quality as 'standard' | 'hd',
       })
 
-      const imageUrl = response.data[0]?.url
+      const imageUrl = response.data?.[0]?.url
 
       if (!imageUrl) {
         return NextResponse.json(
